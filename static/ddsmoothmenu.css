@@ -1,0 +1,94 @@
+.frame {
+	width: 650px;
+	margin: 30px auto;
+	border-radius: 2px;
+	background-color: rgb(247, 247, 247);
+	box-shadow: 0px 0px 30px rgba(0, 0, 0, .1);
+	padding: 50px 30px 30px; /* отступы: top right bottom left */
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+}
+
+
+.title {
+	font-family: 'Josefin Sans';
+	font-weight: 700;
+	font-size: 52px;
+	color: rgb(65, 65, 65);
+	text-align: center;
+	text-shadow: 2px 2px 0px rgba(0, 0, 0, .15);
+	margin: 0px 0px 50px auto; 
+}
+
+.name {
+	font-family: 'Josefin Sans';
+	font-weight: 400;
+	font-size: 42px;
+	color: rgb(35, 35, 65);
+	text-align: center;
+	text-shadow: 2px 2px 0px rgba(0, 0, 0, .15);
+	margin: 0px 0px 50px auto; 
+}
+
+.curse {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	font-size: 27px;
+	background-color: rgb(248, 248, 248);
+	padding: 2px;
+    border: none; /* убираем серую рамку */
+	width: 100%;
+	
+}
+
+
+.input-container {
+	padding: 9px 14px;
+	border: 1px rgb(230, 230, 230) solid;
+	border-radius: 4x;
+	box-shadow: 0px 0px 30px rgba(0, 0, 0, .05);
+	background-color: rgb(248, 248, 248);
+	margin: 0px 0px 30px auto; /*непонятно auto*/
+}
+
+.input {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	font-size: 27px;
+	background-color: rgb(248, 248, 248);
+	padding: 2px;
+    border: none; /* убираем серую рамку */
+	width: 100%;
+}
+
+
+.input:focus {
+    outline: none; /* убираем синюю рамку в активном состоянии */
+}
+
+.input::placeholder {
+    color: rgb(150, 150, 150);
+}
+
+/* Рамочка для них полупрозрачная... мб стоит ее убрать...*/
+.api-elem {
+	box-shadow: 0px 0px 40px rgba(0, 0, 0, .05);
+}
+
+.api-element {
+	padding: 9px 14px;
+	font-size: 27px;
+	color: rgb(65, 65, 65);
+	background-color: rgb(247, 247, 247);
+	border-width: 1px;
+	border-color: rgb(240, 240, 240);
+	border-style: solid none none none;	
+}
+
+
+.image-city {
+	display: flex;
+	align-items: center; /* выровнивание по вертикали */
+	justify-content: center; /* выравнивание по горизонтали */
+	padding: 14px 0px 0px 0px;
+}

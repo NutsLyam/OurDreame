@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Berlin</title>
+    <link href = "{{url_for('static',filename = 'ddsmoothmenu.css')}}" type="text/css"  rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:700|Roboto:300" rel="stylesheet">
+</head>
+
+<body>
+	<div class="frame">
+			<div class="title">Our Dream Guide</div>
+			<div class="name">Berlin</div>
+			
+			<button class = 'back_but'>Главное меню</button> 
+			<button class = 'forward-but'>Достопримечательности</button> 
+			
+			
+			<input  class='input' id='input-trans' placeholder='Input word to translate' />
+			<div class='api-element' id = 'api-transl2'> Немецкий перевод</div>
+
+			
+			<div class='api-element' id = 'api-weather'>Погода: weather ℃</div>
+
+			<div class = "image-city" >
+				<img id = "api_img" src='' >
+			</div>
+
+	<form action="/get_len_berlin" method="post" name="form">
+        <label for="name"> Rubbles:</label>
+        <input id="name" name="name" type="text">
+        <input type="button" value="Calc" onclick="get_len();">
+
+	 	<label>Euro:</label>
+    	<label id="euro"></label>
+	</form>
+		</div>
+
+   <script type=text/javascript src="{{ url_for('static', filename='js/jquery-2.2.2.min.js') }}"></script>
+	<script type="text/javascript" src='static/js/loadImg.js'> </script>
+	<script type="text/javascript" src='static/js/getWeather.js'> </script>
+	<!--<script src='Convert.js'> </script> -->
+	<script type="text/javascript" src='static/js/getCurse.js'> </script>
+	<script type="text/javascript" src='static/js/Translate.js'> </script>
+	<script type="text/javascript" src='static/js/back_menu_but.js'> </script>
+	<script type="text/javascript" src='static/js/D_but.js'> </script>
+
+<script>
+        function get_len() {
+            $.ajax({
+                type: "POST",
+                url: "/get_len_berlin",
+                data: $('form').serialize(),
+                type: 'POST',
+                success: function(response) {
+                    var json = jQuery.parseJSON(response)
+                    $('#euro').html(json.euro)
+                    console.log(response);
+                },
+                error: function(error) {
+                    console.log(error);
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
+
+
+

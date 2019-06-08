@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>main</title>
+    <link href = "{{url_for('static',filename = 'ddsmoothmenu.css')}}"  type="text/css"  rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:700|Roboto:300" rel="stylesheet">
+</head>
+
+<body>
+	<div class="frame">
+			<div class="title">Our Dream Guide</div>
+			<div class='input-container' id='cities'>
+				<input  class='input' id='input-city' placeholder='Choose city name' />
+			</div>
+			
+			<div class="api-elem">
+				<div class = 'api-element'> Город: </div>
+				<div class='api-element' id = 'api-city'> current-city  </div>
+				<div class = 'api-element'> Погода: </div>
+				<div class='api-element' id = 'api-weather'> weather </div>
+				<!--
+				<script src='loadAPI.js'></script>
+
+-->
+				<button class = 'weather-but'>Обновить погоду</button> 
+
+			</div>
+
+			<div class = "image-city" >
+				<img src=https://st.depositphotos.com/1679308/1373/i/450/depositphotos_13732320-stock-photo-griboedov-channel-saint-petersburg-russia.jpg >
+			</div>
+
+
+		<!--Это для подключения скрипта с кодом -->
+	<script type=text/javascript src="{{ url_for('static', filename='js/jquery-2.2.2.min.js') }}"></script>
+	<script type="text/javascript" src="static/js/code.js"></script>
+	<script type="text/javascript" src="static/js/loadAPI.js"></script>
+	<script type="text/javascript" src="static/js/NextPage.js"></script>
+	<script type="text/javascript" src="static/js/Parce.js"></script>
+<!--
+
+
+-->
+
+</div>
+</body>
+
+</html>
